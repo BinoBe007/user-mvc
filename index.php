@@ -6,7 +6,6 @@ use App\Controllers\UserController;
 
 $path = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 $segments = explode('/', $path); //Splitting the URL with /
-
 if (isset($segments[0]) && $segments[0] === 'user') {
     $controller = new UserController($connection);
 
